@@ -43,22 +43,21 @@ bunx jsr add @egamagz/statusx
 npx jsr add @egamagz/statusx
 ```
 
-````
 ## Usage
 
 ### Using Status Codes
 
 ```typescript
-import { StatusCodes } from "@egamagz/statusx";
+import { StatusCodes } from '@egamagz/statusx';
 
 function handleResponse(status: number) {
   if (status === StatusCodes.OK) {
-    console.log("Success!");
+    console.log('Success!');
   } else if (status === StatusCodes.NotFound) {
-    console.log("Resource not found");
+    console.log('Resource not found');
   }
 }
-````
+```
 
 ### Using Reason Phrases
 
@@ -72,7 +71,11 @@ const message = ReasonPhrases.Unauthorized;
 ### Parsing Status Codes
 
 ```typescript
-import { getReasonPhrase, parseStatusCode } from '@egamagz/statusx';
+import {
+  getReasonPhrase,
+  parseStatusCode,
+  StatusCodes,
+} from '@egamagz/statusx';
 
 // Get reason phrase from status code
 getReasonPhrase(200); // "OK"
