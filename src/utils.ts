@@ -149,13 +149,15 @@ const reasonPhraseToStatusCode: Record<string, number> = {
     StatusCodes.NetworkAuthenticationRequired,
 };
 
-const reasonPhraseLowerCaseCache: Record<string, number> = (() => {
-  const cache: Record<string, number> = {};
-  for (const key in reasonPhraseToStatusCode) {
-    cache[key.toLowerCase()] = reasonPhraseToStatusCode[key];
+function getStatusCodeFromPhrase(reasonPhrase: string): number | null {
+  const lower = reasonPhrase.toLowerCase();
+  for (const [phrase, code] of Object.entries(reasonPhraseToStatusCode)) {
+    if (phrase.toLowerCase() === lower) {
+      return code;
+    }
   }
-  return cache;
-})();
+  return null;
+}
 
 /**
  * Returns the reason phrase for a given HTTP status code.
@@ -200,9 +202,8 @@ export function getReasonPhrase(statusCode: number | string | StatusCodes): Reas
  * ```
  */
 export function getStatusCode(reasonPhrase: string | ReasonPhrase): number {
-  const lowerReasonPhrase = reasonPhrase.toLowerCase();
-  const code = reasonPhraseLowerCaseCache[lowerReasonPhrase];
-  if(!code){
+  const code = getStatusCodeFromPhrase(reasonPhrase);
+  if (!code) {
     throw new Error(`Unknown reason phrase: ${reasonPhrase}`);
   }
   return code;
@@ -244,8 +245,7 @@ export function isValidStatusCode(statusCode: number | string | StatusCodes): bo
  * ```
  */
 export function isValidReasonPhrase(reasonPhrase: string | ReasonPhrase): boolean {
-  const lowerReasonPhrase = reasonPhrase.toLowerCase();
-  return reasonPhraseLowerCaseCache[lowerReasonPhrase] !== undefined;
+  return getStatusCodeFromPhrase(reasonPhrase) !== undefined;
 }
 
 /**
