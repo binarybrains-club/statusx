@@ -1,3 +1,5 @@
+export type ReasonPhrase = typeof ReasonPhrases[keyof typeof ReasonPhrases];
+
 export enum ReasonPhrases {
   Continue = 'Continue',
   SwitchingProtocols = 'Switching Protocols',
@@ -18,7 +20,13 @@ export enum ReasonPhrases {
   Found = 'Found',
   SeeOther = 'See Other',
   NotModified = 'Not Modified',
+  /**
+   * @deprecated
+   */
   UseProxy = 'Use Proxy',
+  /**
+   * @deprecated
+   */
   Unused = 'Unused',
   TemporaryRedirect = 'Temporary Redirect',
   PermanentRedirect = 'Permanent Redirect',
@@ -42,6 +50,9 @@ export enum ReasonPhrases {
   ExpectationFailed = 'Expectation Failed',
   ImATeapot = "I'm a teapot",
   InsufficientSpaceOnResource = 'Insufficient Space on Resource',
+  /**
+   * @deprecated
+   */
   MethodFailure = 'Method Failure',
   MisdirectedRequest = 'Misdirected Request',
   UnprocessableContent = 'Unprocessable Content',

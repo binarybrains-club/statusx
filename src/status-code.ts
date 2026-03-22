@@ -1,6 +1,6 @@
-export type StatusCode = typeof HttpStatusCodes[keyof typeof HttpStatusCodes];
+export type StatusCode = typeof StatusCodes[keyof typeof StatusCodes];
 
-export enum HttpStatusCodes {
+export enum StatusCodes {
   Continue = 100,
   SwitchingProtocols = 101,
   Processing = 102,
@@ -60,6 +60,9 @@ export enum HttpStatusCodes {
   UnprocessableContent = 422,
   Locked = 423,
   FailedDependency = 424,
+  /**
+   * @experimental
+   */
   TooEarly = 425,
   UpgradeRequired = 426,
   PreconditionRequired = 428,
@@ -72,6 +75,7 @@ export enum HttpStatusCodes {
   ServiceUnavailable = 503,
   GatewayTimeout = 504,
   HTTPVersionNotSupported = 505,
+  VariantAlsoNegotiates = 506,
   InsufficientStorage = 507,
   LoopDetected = 508,
   NotExtended = 510,
