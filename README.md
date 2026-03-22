@@ -43,7 +43,6 @@ bunx jsr add @egamagz/statusx
 npx jsr add @egamagz/statusx
 ```
 
-````
 ## Usage
 
 ### Using Status Codes
