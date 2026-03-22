@@ -1,8 +1,24 @@
 {
-  "tasks": {
-    "dev": "deno run --watch main.ts"
-  },
+  "name": "@egamagz/statusx",
+  "version": "2026.3.22.01",
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
+  },
+  "fmt": {
+    "options": {
+      "singleQuote": true,
+      "useTabs": false
+    }
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"],
+      "include": [
+        "explicit-function-return-type",
+        "eqeqeq",
+        "explicit-module-boundary-types",
+        "no-inferrable-types"
+      ]
+    }
   }
 }
