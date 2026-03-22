@@ -2,14 +2,14 @@ import { describe, it } from '@std/testing/bdd';
 import { assertEquals, assertThrows } from '@std/assert';
 import {
   getReasonPhrase,
-  parseStatusCode,
-  isValidStatusCode,
-  isValidReasonPhrase,
-  isInformational,
-  isSuccess,
-  isRedirect,
   isClientError,
+  isInformational,
+  isRedirect,
   isServerError,
+  isSuccess,
+  isValidReasonPhrase,
+  isValidStatusCode,
+  parseStatusCode,
 } from './utils.ts';
 import { StatusCodes } from './status_code.ts';
 import { ReasonPhrases } from './reason_phrase.ts';
@@ -42,7 +42,11 @@ describe('getReasonPhrase', () => {
   });
 
   it('should throw for invalid status code', () => {
-    assertThrows(() => getReasonPhrase('invalid'), Error, 'Invalid status code');
+    assertThrows(
+      () => getReasonPhrase('invalid'),
+      Error,
+      'Invalid status code',
+    );
   });
 
   it('should throw for unknown status code', () => {

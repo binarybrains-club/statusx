@@ -151,7 +151,7 @@ const reasonPhraseToStatusCode: Record<string, number> = {
 
 /**
  * Returns the reason phrase for a given HTTP status code.
- * 
+ *
  * @param {number | string} statusCode - The HTTP status code (e.g., 200, "404", StatusCodes.OK).
  * @returns {ReasonPhrase} The reason phrase corresponding to the status code.
  * @throws {Error} If the status code is invalid or unknown.
