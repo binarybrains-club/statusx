@@ -175,7 +175,7 @@ function getStatusCodeFromPhrase(reasonPhrase: string): number | null {
  *
  *  @example
  * ```ts
- * import { getReasonPhrase, StatusCodes } from "@egamagz/statusx"
+ * import { getReasonPhrase, StatusCodes } from "@binarybrains/statusx"
  * getReasonPhrase(200)       // "OK"
  * getReasonPhrase("404")     // "Not Found"
  * getReasonPhrase(StatusCodes.BadRequest)  // "Bad Request"
@@ -204,7 +204,7 @@ export function getReasonPhrase(
  *
  * @example
  * ```ts
- * import { parseStatusCode, ReasonPhrases } from "@egamagz/statusx"
+ * import { parseStatusCode, ReasonPhrases } from "@binarybrains/statusx"
  * parseStatusCode("OK")              // 200
  * parseStatusCode("not found")      // 404
  * parseStatusCode("Internal Server Error")  // 500
@@ -227,7 +227,7 @@ export function parseStatusCode(reasonPhrase: string): number {
  *
  * @example
  * ```ts
- * import { isValidStatusCode } from "@egamagz/statusx"
+ * import { isValidStatusCode } from "@binarybrains/statusx"
  *
  * isValidStatusCode(200)   // true
  * isValidStatusCode("404") // true
@@ -249,7 +249,7 @@ export function isValidStatusCode(
  *
  * @example
  * ```ts
- * import { isValidReasonPhrase } from "@egamagz/statusx"
+ * import { isValidReasonPhrase } from "@binarybrains/statusx"
  *
  * isValidReasonPhrase("OK")          // true
  * isValidReasonPhrase("not found")    // true (case-insensitive)
@@ -270,7 +270,7 @@ export function isValidReasonPhrase(
  *
  * @example
  * ```ts
- * import { isInformational } from "@egamagz/statusx"
+ * import { isInformational } from "@binarybrains/statusx"
  *
  * isInformational(100)  // true (Continue)
  * isInformational(200)  // false
@@ -291,7 +291,7 @@ export function isInformational(
  *
  * @example
  * ```ts
- * import { isSuccess } from "@egamagz/statusx"
+ * import { isSuccess } from "@binarybrains/statusx"
  *
  * isSuccess(200)  // true (OK)
  * isSuccess(404)  // false
@@ -310,7 +310,7 @@ export function isSuccess(statusCode: number | string): boolean {
  *
  * @example
  * ```ts
- * import { isRedirect } from "@egamagz/statusx"
+ * import { isRedirect } from "@binarybrains/statusx"
  *
  * isRedirect(301)  // true (Moved Permanently)
  * isRedirect(200)  // false
@@ -329,7 +329,7 @@ export function isRedirect(statusCode: number | string): boolean {
  *
  * @example
  * ```ts
- * import { isClientError } from "@egamagz/statusx"
+ * import { isClientError } from "@binarybrains/statusx"
  * isClientError(404)  // true (Not Found)
  * isClientError(500)  // false
  * ```
