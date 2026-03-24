@@ -3,8 +3,8 @@
 > A cross-runtime package providing HTTP status code constants with reason
 > phrases and utility functions.
 
-[![JSR](https://jsr.io/badges/@egamagz/statusx)](https://jsr.io/@egamagz/statusx)
-[![JSR Score](https://jsr.io/badges/@egamagz/statusx/score)](https://jsr.io/@egamagz/statusx/score)
+[![JSR](https://jsr.io/badges/@binarybrains/statusx)](https://jsr.io/@binarybrains/statusx)
+[![JSR Score](https://jsr.io/badges/@binarybrains/statusx/score)](https://jsr.io/@binarybrains/statusx/score)
 ![GitHub License](https://img.shields.io/github/license/egamagz/statusx)
 ![GitHub Release](https://img.shields.io/github/v/release/egamagz/statusx)
 
@@ -28,19 +28,19 @@ The package exports:
 **With Deno**
 
 ```console
-deno add jsr:@egamagz/statusx
+deno add jsr:@binarybrains/statusx
 ```
 
 **With Bun**
 
 ```console
-bunx jsr add @egamagz/statusx
+bunx jsr add @binarybrains/statusx
 ```
 
 **With NPM**
 
 ```console
-npx jsr add @egamagz/statusx
+npx jsr add @binarybrains/statusx
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ npx jsr add @egamagz/statusx
 ### Using Status Codes
 
 ```typescript
-import { StatusCodes } from '@egamagz/statusx';
+import { StatusCodes } from '@binarybrains/statusx';
 
 function handleResponse(status: number) {
   if (status === StatusCodes.OK) {
@@ -62,7 +62,7 @@ function handleResponse(status: number) {
 ### Using Reason Phrases
 
 ```typescript
-import { ReasonPhrases } from '@egamagz/statusx';
+import { ReasonPhrases } from '@binarybrains/statusx';
 
 const message = ReasonPhrases.Unauthorized;
 // "Unauthorized"
@@ -75,7 +75,7 @@ import {
   getReasonPhrase,
   parseStatusCode,
   StatusCodes,
-} from '@egamagz/statusx';
+} from '@binarybrains/statusx';
 
 // Get reason phrase from status code
 getReasonPhrase(200); // "OK"
@@ -91,7 +91,7 @@ parseStatusCode('Internal Server Error'); // 500
 ### Validation
 
 ```typescript
-import { isValidReasonPhrase, isValidStatusCode } from '@egamagz/statusx';
+import { isValidReasonPhrase, isValidStatusCode } from '@binarybrains/statusx';
 
 isValidStatusCode(200); // true
 isValidStatusCode('404'); // true
@@ -111,7 +111,7 @@ import {
   isRedirect,
   isServerError,
   isSuccess,
-} from '@egamagz/statusx';
+} from '@binarybrains/statusx';
 
 isInformational(100); // true (Continue)
 isSuccess(200); // true (OK)
@@ -154,4 +154,5 @@ isServerError(500); // true (Internal Server Error)
 MIT
 
 ---
-Created by [@EGAMAGZ](https://github.com/EGAMAGZ)
+
+Created by [@binarybrains](https://github.com/EGAMAGZ)

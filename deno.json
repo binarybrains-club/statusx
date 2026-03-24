@@ -1,5 +1,5 @@
 {
-  "name": "@egamagz/statusx",
+  "name": "@binarybrains/statusx",
   "version": "2026.3.24",
   "exports": "./mod.ts",
   "licence": "MIT",
