@@ -1,6 +1,6 @@
 {
   "name": "@binarybrains/statusx",
-  "version": "2026.3.25",
+  "version": "2026.3.26",
   "exports": "./mod.ts",
   "licence": "MIT",
   "lock": false,
@@ -25,8 +25,10 @@
       ]
     }
   },
-  "exclude": [
-    ".git",
-    "*_test.ts"
-  ]
+  "publish": {
+    "exclude": [
+      ".github",
+      "src/**/*_test.ts"
+    ]
+  }
 }
