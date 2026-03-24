@@ -154,4 +154,5 @@ isServerError(500); // true (Internal Server Error)
 MIT
 
 ---
+
 Created by [@binarybrains](https://github.com/EGAMAGZ)
