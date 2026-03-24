@@ -1,6 +1,6 @@
 {
   "name": "@binarybrains/statusx",
-  "version": "2026.3.24",
+  "version": "2026.3.25",
   "exports": "./mod.ts",
   "licence": "MIT",
   "lock": false,
